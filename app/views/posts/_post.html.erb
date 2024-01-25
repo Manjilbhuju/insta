@@ -1,0 +1,16 @@
+<div id="<%= dom_id post %>">
+  <div class="card container text-center border-dark border border-5" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= post.keywords%></h6>
+      <p class="card-text"><%= post.description %></p>
+      <div>
+      <%= link_to "edit", edit_post_path(post) %>
+      </div>
+      <%= button_to "delete", post, method: :delete%>
+
+    </div>
+  </div>
+</div>
+
+ 
