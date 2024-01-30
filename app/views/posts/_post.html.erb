@@ -5,8 +5,8 @@
       <h6 class="card-subtitle mb-2 text-body-secondary"><%= post.keywords%></h6>
       <p class="card-text"><%= post.description %></p>
       <div>
-        <% if @post.image.attached? %>
-          <%= image_tag @post.image %>
+        <% if post.image.attached? %>
+          <%= image_tag post.image, style: "width: 200px; height: 200px;" %>
         <% end %>
       </div>
       <div>
