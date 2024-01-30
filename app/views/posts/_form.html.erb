@@ -30,7 +30,10 @@
       <%= post.errors.full_messages_for(:keywords).join(" ,") %>
       </p>
     <% end %>
-  </div>
+    <div>
+      <%= form.label :image %>
+      <%= form.file_field :image, class:"form-control" %>
+    </div>
 
   <div>
     <%= form.submit %>

@@ -5,10 +5,14 @@
       <h6 class="card-subtitle mb-2 text-body-secondary"><%= post.keywords%></h6>
       <p class="card-text"><%= post.description %></p>
       <div>
+        <% if @post.image.attached? %>
+          <%= image_tag @post.image %>
+        <% end %>
+      </div>
+      <div>
       <%= link_to "edit", edit_post_path(post) %>
       </div>
       <%= button_to "delete", post, method: :delete%>
-
     </div>
   </div>
 </div>
